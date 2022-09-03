@@ -1,6 +1,6 @@
 {
   "name": "@qcases/common",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common lib for using between phone case projects",
   "main": "lib/index.js",
   "scripts": {
