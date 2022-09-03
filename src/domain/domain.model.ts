@@ -36,6 +36,7 @@ export interface BoxMetric {
   export interface PhoneCase {
     id: string;
     name: string;
+    alias: string,
     imageUrl: string;
     exactBoundary: ContainedBoxMetric;
     camera: ContainedBoxMetric;
@@ -45,6 +46,7 @@ export interface BoxMetric {
     id: string;
     name: string;
     alias: string;
+    phoneCaseId?: string,
     phoneCase: PhoneCase;
     grids: Grid[];
   }
