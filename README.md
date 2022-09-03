@@ -1,3 +1,5 @@
+# Intro
+Common utils and ui component for building frontend
 # Pre-requisites
 - Nodejs: https://nodejs.org/en/download/package-manager/
 # Build project
