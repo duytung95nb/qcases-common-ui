@@ -1,5 +1,5 @@
 {
-  "name": "@phone-case/phone-case-common",
+  "name": "@qcases/common",
   "version": "1.0.0",
   "description": "Common lib for using between phone case projects",
   "main": "lib/index.js",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duytung95nb/phone-case-common.git"
+    "url": "git+https://github.com/duytung95nb/qcases-common.git"
   },
   "keywords": [
-    "phone-case"
+    "qcases"
   ],
   "author": "Tung Dao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/duytung95nb/phone-case-common/issues"
+    "url": "https://github.com/duytung95nb/qcases-common/issues"
   },
-  "homepage": "https://github.com/duytung95nb/phone-case-common#readme",
+  "homepage": "https://github.com/duytung95nb/qcases-common#readme",
   "peerDependencies": {
     "lodash": "^4.17.21",
     "mdb-react-ui-kit": "^4.1.0",
