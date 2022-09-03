@@ -1,0 +1,35 @@
+{
+  "name": "@phone-case/phone-case-common",
+  "version": "1.0.0",
+  "description": "Common lib for using between phone case projects",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duytung95nb/phone-case-common.git"
+  },
+  "keywords": [
+    "phone-case"
+  ],
+  "author": "Tung Dao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duytung95nb/phone-case-common/issues"
+  },
+  "homepage": "https://github.com/duytung95nb/phone-case-common#readme",
+  "peerDependencies": {
+    "lodash": "^4.17.21",
+    "mdb-react-ui-kit": "^4.1.0",
+    "react": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.184",
+    "@types/react": "^18.0.18",
+    "mdb-react-ui-kit": "^4.2.0",
+    "typescript": "^4.8.2"
+  },
+  "types": "lib/index.d.ts"
+}
