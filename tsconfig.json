@@ -10,7 +10,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noImplicitAny": false,
-    "outDir": "./lib",
+    "outDir": "./lib"
   },
   "include": [
     "src"
