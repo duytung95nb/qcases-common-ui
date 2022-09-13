@@ -1,0 +1,28 @@
+.outputPhoneCasePreview {
+    &__mainContent {
+      height: 80vh;
+      position: relative;
+    }
+    &__exactBoundary {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    &__exportContainer {
+      position: relative;
+      border-style: solid;
+      border-color: red;
+      overflow: hidden;
+    }
+    &__backgroundImage {
+      width: 100%;
+      position: absolute;
+    }
+    &__cameraArea {
+      position: absolute;
+      border-style: solid;
+      border-color: red;
+      background-color: white;
+      z-index: 1;
+    }
+  }
