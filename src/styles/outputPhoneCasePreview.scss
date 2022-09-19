@@ -4,24 +4,22 @@
       position: relative;
     }
     &__exactBoundary {
-      height: 100%;
-      width: 100%;
-      position: relative;
+      position: absolute;
     }
     &__exportContainer {
       position: relative;
-      border-style: solid;
-      border-color: red;
+      outline-style: solid;
+      outline-color: rgba(255, 0, 0, 0.466);
       overflow: hidden;
     }
     &__backgroundImage {
-      width: 100%;
-      position: absolute;
+      width: auto;
+      height: 100%;
     }
     &__cameraArea {
       position: absolute;
-      border-style: solid;
-      border-color: red;
+      outline-style: solid;
+      outline-color: rgba(255, 0, 0, 0.719);
       background-color: white;
       z-index: 1;
     }

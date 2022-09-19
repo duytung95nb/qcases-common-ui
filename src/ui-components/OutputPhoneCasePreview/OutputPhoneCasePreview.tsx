@@ -104,7 +104,7 @@ const OutputPhoneCasePreviewInner: React.FC<OutputPhoneCasePreviewProps> = ({
                     borderBottomRightRadius: `${calculatedCamera.borderBottomRightRadius}px`,
                     borderTopLeftRadius: `${calculatedCamera.borderTopLeftRadius}px`,
                     borderTopRightRadius: `${calculatedCamera.borderTopRightRadius}px`,
-                    borderWidth: `${ratio}px`,
+                    outlineWidth: `${ratio}px`,
                   }}
                 ></div>
                 {children}
