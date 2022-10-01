@@ -9,6 +9,7 @@ const OutputPhoneCasePreviewInner: React.FC<OutputPhoneCasePreviewProps> = ({
   phoneCase,
   ratio,
   exactBoundaryRef,
+  exactBoundaryHiddenOverflow,
   onChangeRenderRatio,
   children,
 }) => {
@@ -79,7 +80,11 @@ const OutputPhoneCasePreviewInner: React.FC<OutputPhoneCasePreviewProps> = ({
               onLoad={onFinishLoadingImage}
             />
             <div
-              className="outputPhoneCasePreview__exactBoundary"
+              className={`outputPhoneCasePreview__exactBoundary ${
+                exactBoundaryHiddenOverflow
+                  ? 'outputPhoneCasePreview__exactBoundary--hidden-overflow'
+                  : ''
+              }`}
               ref={exactBoundaryRef}
               style={{
                 width: `${calculatedExactBoundary.width}px`,

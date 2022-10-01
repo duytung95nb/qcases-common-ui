@@ -5,6 +5,9 @@
     }
     &__exactBoundary {
       position: absolute;
+      &--hidden-overflow {
+        overflow: hidden;
+      }
     }
     &__exportContainer {
       position: relative;
