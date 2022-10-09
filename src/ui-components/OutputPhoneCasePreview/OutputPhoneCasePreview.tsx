@@ -2,6 +2,7 @@ import { ContainedBoxMetric } from '@qcases/common';
 import _ from 'lodash';
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useResizeDetector } from 'react-resize-detector';
 import { OutputPhoneCasePreviewProps } from './OutputPhoneCasePreview.types';
 
 const OutputPhoneCasePreviewInner: React.FC<OutputPhoneCasePreviewProps> = ({
@@ -15,30 +16,20 @@ const OutputPhoneCasePreviewInner: React.FC<OutputPhoneCasePreviewProps> = ({
 }) => {
   const { exactBoundary, camera, imageUrl } = phoneCase;
   const imageRef = useRef<HTMLImageElement>(null);
-  const [currentWindowWidth, setCurrentWindowWidth] = useState(
-    window.innerWidth
-  );
   const [calculatedExactBoundary, setCalculatedExactBoundary] = useState<
     Partial<ContainedBoxMetric>
   >({ ...exactBoundary });
   const [calculatedCamera, setCalculatedCamera] = useState<
     Partial<ContainedBoxMetric>
   >({ ...camera });
-  useEffect(() => {
-    const windowResizeEventHandler = _.throttle(() => {
-      setCurrentWindowWidth(window.innerWidth);
-    }, 80);
-    window.addEventListener('resize', windowResizeEventHandler);
-    return () => {
-      window.removeEventListener('resize', windowResizeEventHandler);
-    };
-  }, []);
+
+  const { width, height, ref } = useResizeDetector();
   useEffect(() => {
     if (!imageRef?.current) {
       return;
     }
     onChangeRenderRatio(imageRef.current.width / imageRef.current.naturalWidth);
-  }, [currentWindowWidth, onChangeRenderRatio]);
+  }, [width, height, onChangeRenderRatio]);
   useEffect(() => {
     if (!exactBoundary) {
       return;
@@ -69,6 +60,7 @@ const OutputPhoneCasePreviewInner: React.FC<OutputPhoneCasePreviewProps> = ({
     <Container
       className="outputPhoneCasePreview"
       id={elementId ? elementId : _.uniqueId()}
+      ref={ref}
     >
       <Row>
         <Col>
